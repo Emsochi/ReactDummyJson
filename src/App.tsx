@@ -19,6 +19,7 @@ function App() {
         <Link to='/'>Home</Link>
         <Link to='/quotes'>Quotes</Link>
         <Link to='/comments'>Comments</Link>
+        <Link to='/socialmedia'>Social Media</Link>
       </header>
     </div>
 

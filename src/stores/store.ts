@@ -1,12 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import quotesSlice from "./quotesSlice";
 import someComments from "./someComments";
+import postsSlice from "./postsSlice";
+import usersSlice from "./usersSlice";
 
 const store = configureStore({
     reducer: {
         quotes: quotesSlice,
-        comments: someComments
-
+        comments: someComments,
+        posts: postsSlice,
+        users: usersSlice,
     }
 })
 

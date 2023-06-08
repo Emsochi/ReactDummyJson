@@ -1,26 +1,26 @@
 import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'
 import axios from 'axios'
-import { Comments } from '../interfaces/Comments'
+import { Users } from '../interfaces/Users'
 
-interface SomeComments {
-    data: Comments | null
+interface UsersState {
+    data: Users | null
     status : 'idle' | 'loading' | 'succeeded' | 'failed'
     error: string | null
 }
 
-const  initialState : SomeComments ={
+const initialState : UsersState ={
     data: null,
     status: 'idle',
     error : null
 }
 
-export const fetchData = createAsyncThunk('data/fetchCommentData', async () => {
-    const response = await axios.get(process.env.REACT_APP_COMMENTS_GET!)
+export const fetchData = createAsyncThunk('data/fetchUserData', async () => {
+    const response = await axios.get(process.env.REACT_APP_USERS_GET!)
     return response.data
 })
 
 const dataSlice = createSlice({
-    name: 'comments',
+    name: 'users',
     initialState,
     reducers: {
 
@@ -30,7 +30,7 @@ const dataSlice = createSlice({
         builder.addCase(fetchData.pending, (state, action) => {
             state.status = 'loading'
         })
-        builder.addCase(fetchData.fulfilled, (state, action : PayloadAction<Comments>) => {
+        builder.addCase(fetchData.fulfilled, (state, action : PayloadAction<Users>) => {
             state.status = 'succeeded'
             state.data = action.payload
         })

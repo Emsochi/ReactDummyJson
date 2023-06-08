@@ -14,13 +14,13 @@ const initialState : QuoteState ={
     error : null
 }
 
-export const fetchData = createAsyncThunk('data/fetchData', async () => {
+export const fetchData = createAsyncThunk('data/fetchQuoteData', async () => {
     const response = await axios.get(process.env.REACT_APP_QUOTES_GET!)
     return response.data
 })
 
 const dataSlice = createSlice({
-    name: 'data',
+    name: 'quotes',
     initialState,
     reducers: {
 

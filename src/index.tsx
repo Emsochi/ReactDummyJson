@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import QuotesPage from './QuotesPage';
 import CommentsPage from './CommentsPage';
 import { Provider } from 'react-redux';
+import SocialMediaPage from './SocialMediaPage';
 
 import store from './stores/store'
 
@@ -22,6 +23,7 @@ root.render(
       <Route path="/"  Component={App}> </Route>
       <Route path="/quotes"  Component={QuotesPage}> </Route>
       <Route path="/comments" Component={CommentsPage}></Route>
+      <Route path='/socialmedia' Component={SocialMediaPage}></Route>
    </Routes>
   </Router>
   </Provider>
