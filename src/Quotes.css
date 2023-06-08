@@ -1,0 +1,21 @@
+.quotes-container {
+    height: 100vh;
+    background: url("../public/quotesBackground.jpg");
+    background-size: cover;
+}
+
+.quote {
+background-color: white;
+padding: 6rem 6rem;
+width: 80%;
+margin:auto;
+margin-top: 10rem;
+}
+
+.quote-content {
+    clear: both;
+}
+.quote-icon {
+    font-size: 4rem !important;
+    float: left;
+}
