@@ -1,0 +1,29 @@
+.profile-picture {
+    max-width: 4rem;
+    max-height: 4rem;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.post-details {
+    border: 1px solid gray;
+    margin: 0 2rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.post {
+    display: flex;
+    align-items: top;
+}
+
+.reaction-img {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+
+.reactions {
+    display: flex;
+    align-items: center;
+}
